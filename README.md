@@ -1,6 +1,6 @@
 # miniperf
 
-Code example for the article "How Perf(1) works" on blog.gistre.epita.fr. The
+Code example for the article "How Perf(1) works" on the [GISTRE's Blog](blog.gistre.epita.fr/). The
 examples follow do not follow good practices, like verifying the return code of
 functions, for the sake of being shorter.
 
