@@ -23,7 +23,7 @@ uint64_t read_msr(int cpu, uint32_t msr) {
 
     int fd = open(msr_path, O_RDONLY);
     uint64_t data;
-    pread(fd, &data, sizeof(data), msr) != sizeof(data);
+    pread(fd, &data, sizeof(data), msr);
 
     close(fd);
     return data;
@@ -35,7 +35,7 @@ void write_msr(int cpu, uint32_t msr, uint64_t value) {
     snprintf(msr_path, sizeof(msr_path), "/dev/cpu/%d/msr", cpu);
 
     int fd = open(msr_path, O_WRONLY);
-    pwrite(fd, &value, sizeof(value), msr) != sizeof(value);
+    pwrite(fd, &value, sizeof(value), msr);
     close(fd);
 }
 
